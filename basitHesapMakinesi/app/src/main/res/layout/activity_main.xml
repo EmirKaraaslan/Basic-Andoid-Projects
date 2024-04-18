@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="56dp"
+        android:text="Basit Hesap Makinesi"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginEnd="108dp"
+        android:ems="10"
+        android:hint="1.sayıyı giriniz"
+        android:inputType="number|numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="2.Sayıyı giriniz"
+        android:inputType="number|numberSigned"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
+
+    <TextView
+        android:id="@+id/textViewSonuc"
+        android:layout_width="62dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="4dp"
+        android:text="Sonuc"
+        app:layout_constraintEnd_toStartOf="@+id/butonBolme"
+        app:layout_constraintTop_toBottomOf="@+id/butonCikartma" />
+
+    <Button
+        android:id="@+id/butonToplama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="btnClick"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butonCikartma"
+        app:layout_constraintEnd_toStartOf="@+id/butonCikartma"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butonCikartma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/butonBolme"
+        app:layout_constraintStart_toEndOf="@+id/butonToplama"
+        app:layout_constraintTop_toTopOf="@+id/butonBolme" />
+
+    <Button
+        android:id="@+id/butonBolme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/butonCarpma"
+        app:layout_constraintStart_toEndOf="@+id/butonCikartma"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
+
+    <Button
+        android:id="@+id/butonCarpma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X"
+        app:layout_constraintBaseline_toBaselineOf="@+id/butonBolme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/butonBolme" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
